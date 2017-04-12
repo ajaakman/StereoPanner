@@ -17,8 +17,8 @@
   ==============================================================================
 */
 
-#ifndef __JUCE_HEADER_F1B68972952BE4__
-#define __JUCE_HEADER_F1B68972952BE4__
+#ifndef __JUCE_HEADER_FC76FA5BA2987F99__
+#define __JUCE_HEADER_FC76FA5BA2987F99__
 
 //[Headers]     -- You can add your own extra header files here --
 #include "JuceHeader.h"
@@ -35,12 +35,13 @@
     Describe your class and how it works here!
                                                                     //[/Comments]
 */
-class PluginEditor  : public Component
+class StereoPannerAudioProcessorEditor  : public AudioProcessorEditor,
+                                          public Timer
 {
 public:
     //==============================================================================
-    PluginEditor ();
-    ~PluginEditor();
+    StereoPannerAudioProcessorEditor (StereoPannerAudioProcessor& p);
+    ~StereoPannerAudioProcessorEditor();
 
     //==============================================================================
     //[UserMethods]     -- You can add your own custom methods in this section.
@@ -61,10 +62,10 @@ private:
 
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PluginEditor)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (StereoPannerAudioProcessorEditor)
 };
 
 //[EndFile] You can add extra defines here...
 //[/EndFile]
 
-#endif   // __JUCE_HEADER_F1B68972952BE4__
+#endif   // __JUCE_HEADER_FC76FA5BA2987F99__
